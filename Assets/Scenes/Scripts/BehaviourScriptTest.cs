@@ -7,8 +7,10 @@ public class BehaviourScriptTest : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int coins = 0;
+    public static int health = 100;
     public static int q_num = 0;
     public Text healthText;
+    public Text coinText;
     
     void Start()
     {
@@ -18,7 +20,8 @@ public class BehaviourScriptTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Coins :" + coins;
+        coinText.text = "Coins :" + coins;
+        healthText.text = "Health :" + health;
         // if(Input.GetKeyDown(KeyCode.Space))
         // {
         //     coins++;
