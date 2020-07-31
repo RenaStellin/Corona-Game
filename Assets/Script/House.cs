@@ -6,6 +6,8 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject gohomePanel;
+    public int tmpC=0;
     void Start()
     {
         
@@ -18,7 +20,12 @@ public class House : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("House");
+        tmpC = tmpC + 1;
+        Debug.Log("Housewow da "+tmpC);
+        if(tmpC>1)
+        {
+            gohomePanel.SetActive(true);
+        }
 
     }
 }

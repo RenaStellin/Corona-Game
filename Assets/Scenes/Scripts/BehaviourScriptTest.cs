@@ -22,6 +22,7 @@ public class BehaviourScriptTest : MonoBehaviour
     {
         coinText.text = "Coins :" + coins;
         healthText.text = "Health :" + health;
+        // DontDestroyOnLoad(coinText);
         // if(Input.GetKeyDown(KeyCode.Space))
         // {
         //     coins++;

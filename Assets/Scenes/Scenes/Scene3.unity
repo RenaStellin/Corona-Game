@@ -2286,10 +2286,11 @@ GameObject:
   - component: {fileID: 1698637287}
   - component: {fileID: 1698637290}
   - component: {fileID: 1698637289}
+  - component: {fileID: 1698637291}
   - component: {fileID: 1698637288}
   m_Layer: 5
   m_Name: TextCoins
-  m_TagString: Untagged
+  m_TagString: metrics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2368,6 +2369,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698637286}
   m_CullTransparentMesh: 0
+--- !u!114 &1698637291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698637286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d96470d240015b4aa018db3b13d4511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933501458
 GameObject:
   m_ObjectHideFlags: 0
