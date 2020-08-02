@@ -25,10 +25,12 @@ public class panel_yes_no : MonoBehaviour
     }
     public void yesbtn()
     {
-        if (BehaviourScriptTest.coins > 0)
+        int count = 0;
+        if (count == 0 && BehaviourScriptTest.coins >= 0)
         {
             BehaviourScriptTest.coins = BehaviourScriptTest.coins - 10;
             BehaviourScriptTest.health = BehaviourScriptTest.health + 10;
+            count++;
         }
         else
         {

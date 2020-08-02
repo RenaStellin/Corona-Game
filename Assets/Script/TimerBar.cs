@@ -32,6 +32,7 @@ public class TimerBar : MonoBehaviour
     public void OpenPanel()
     {
         Panel.SetActive(true);
+        BehaviourScriptTest.health = BehaviourScriptTest.health - 30;
     }
 
    
