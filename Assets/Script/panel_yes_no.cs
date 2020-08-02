@@ -20,4 +20,9 @@ public class panel_yes_no : MonoBehaviour
     {
         gohomePanel.SetActive(false);
     }
+    public void yesbtn()
+    {
+        BehaviourScriptTest.coins = BehaviourScriptTest.coins - 10;
+        BehaviourScriptTest.health = BehaviourScriptTest.health + 10;
+    }
 }
