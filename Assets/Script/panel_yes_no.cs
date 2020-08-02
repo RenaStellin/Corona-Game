@@ -6,6 +6,8 @@ public class panel_yes_no : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject gohomePanel;
+    public GameObject noMoney;
+    public GameObject hidePanel;
     void Start()
     {
         
@@ -19,10 +21,20 @@ public class panel_yes_no : MonoBehaviour
     public void nobtn()
     {
         gohomePanel.SetActive(false);
+        noMoney.SetActive(false);
     }
     public void yesbtn()
     {
-        BehaviourScriptTest.coins = BehaviourScriptTest.coins - 10;
-        BehaviourScriptTest.health = BehaviourScriptTest.health + 10;
+        if (BehaviourScriptTest.coins > 0)
+        {
+            BehaviourScriptTest.coins = BehaviourScriptTest.coins - 10;
+            BehaviourScriptTest.health = BehaviourScriptTest.health + 10;
+        }
+        else
+        {
+            noMoney.SetActive(true);
+            hidePanel.SetActive(false);
+
+        }
     }
 }
