@@ -16,12 +16,17 @@ public class panelOpener : MonoBehaviour
     // private int coins = 0;
     public Text healthText;
     string[] qs = System.IO.File.ReadAllLines("qs.txt");
+    string[] as1 = System.IO.File.ReadAllLines("as1.txt");
+    string[] as2 = System.IO.File.ReadAllLines("as2.txt");
+    string[] as3 = System.IO.File.ReadAllLines("as3.txt");
+    string[] as4 = System.IO.File.ReadAllLines("as4.txt");
+    string[] key = System.IO.File.ReadAllLines("key.txt");
     // public string[] qs = {"script q1", "script q2", "script q3", "script q4"};
-    public string[] as1 = {"script a1q1", "script a1q2", "script a1q3", "script a1q4"};
-    public string[] as2 = {"script a2q1", "script a2q2", "script a2q3", "script a2q4"};
-    public string[] as3 = {"script a3q1", "script a3q2", "script a3q3", "script a3q4"};
-    public string[] as4 = {"script a4q1", "script a4q2", "script a4q3", "script a4q4"};
-    public string[] key = {"1,2,3,4","4,1,2,3","1,4,2,3","1,2,4,3"};
+    // public string[] as1 = {"script a1q1", "script a1q2", "script a1q3", "script a1q4"};
+    // public string[] as2 = {"script a2q1", "script a2q2", "script a2q3", "script a2q4"};
+    // public string[] as3 = {"script a3q1", "script a3q2", "script a3q3", "script a3q4"};
+    // public string[] as4 = {"script a4q1", "script a4q2", "script a4q3", "script a4q4"};
+    // public string[] key = {"1,2,3,4","4,1,2,3","1,4,2,3","1,2,4,3"};
     // public int q_num = 0;
     // Start is called before the first frame update
     public void OpenPanel()
@@ -46,11 +51,7 @@ public class panelOpener : MonoBehaviour
         BehaviourScriptTest.coins = BehaviourScriptTest.coins+ user_score;
         Panel.SetActive(false);
         resPanel.SetActive(true);
-        BehaviourScriptTest.q_num = BehaviourScriptTest.q_num + 1;
-        if(BehaviourScriptTest.q_num==4)
-        {
-            BehaviourScriptTest.q_num = 0;
-        }
+        
         int q_num = BehaviourScriptTest.q_num;
         q.text = qs[q_num];
         a1.text = as1[q_num];
@@ -97,7 +98,16 @@ public class panelOpener : MonoBehaviour
     }
     public void nxtbtnClick()
     {
-        resPanel.SetActive(false);
+        BehaviourScriptTest.q_num = BehaviourScriptTest.q_num + 1;
+        if(BehaviourScriptTest.q_num==4)
+        {
+            resPanel.SetActive(false);
+        // Panel.SetActive(true);
+        }
+        else{
+            resPanel.SetActive(false);
         Panel.SetActive(true);
+        }
+        
     }
 }
